@@ -18,22 +18,26 @@
 
 	<div class="card border-0 w-25">
 		<div class="card-header bg-light">
-			<div class="nav nav-tabs card-header-tabs">
-				<a href="#login" class="nav-link active" data-toggle="tab">Log In</a>
-				<a href="#signup" class="nav-link" data-toggle="tab">Sign Up</a>
+			<div class="nav nav-pills card-header-pills">
+				<a href="#login" class="nav-link active" data-toggle="pill">Log In</a>
+				<a href="#signup" class="nav-link" data-toggle="pill">Sign Up</a>
 			</div>
 		</div>
 		<div class="card-body">
 			<div class="tab-content">
-				<div class="tab-pane fade active show" id="login">
-					<h4 class="font-weight-bold text-secondary">Log In</h4>
-					<hr>
-
+				<div class="tab-pane fade show active" id="login">
 					<form method="post">
-						<input type="text" name="l_username" class="form-control mb-2" placeholder="Username" required>
-						<input type="password" name="l_pass" class="form-control mb-2" placeholder="Password" required>
+						<div class="form-group">
+							<span class="text-secondary font-weight-bold">Username</span>
+							<input type="text" name="l_username" class="form-control rounded-0" placeholder="Username" required>
+						</div>
+
+						<div class="form-group">
+							<span class="text-secondary font-weight-bold">Password</span>
+							<input type="password" name="l_pass" class="form-control rounded-0" placeholder="Password" required>
+						</div>
 						<hr>
-						<button class="btn btn-block btn-warning" type="submit" name="log_in">Log In</button>
+						<button class="btn btn-block btn-warning font-weight-bold" type="submit" name="log_in">Log In</button>
 					</form>
 					<?php
 						if (isset($_POST['log_in'])) {
@@ -65,29 +69,31 @@
 					?>
 				</div>
 				<div class="tab-pane fade" id="signup">
-					<h4 class="font-weight-bold text-secondary">Sign Up</h4>
-					<hr>
-
 					<form method="post">
-						<div class="form-row">
-							<div class="col">
-								<input type="text" name="s_name" class="form-control mb-2" placeholder="Name" required>
-							</div>
-							<div class="col">
-								<input type="text" name="s_lastname" class="form-control mb-2" placeholder="Lastname" required>
+						<div class="form-group">
+							<span class="text-secondary font-weight-bold">Name</span>
+							<div class="form-row">
+								<div class="col">
+									<input type="text" name="s_name" class="form-control rounded-0" placeholder="Name" required>
+								</div>
+								<div class="col">
+									<input type="text" name="s_lastname" class="form-control rounded-0" placeholder="Lastname" required>
+								</div>
 							</div>
 						</div>
-						<input type="text" name="s_username" class="form-control mb-2" placeholder="Username" required>
-						<input type="password" name="s_pass" class="form-control mb-2" placeholder="Password" required>
-						<select class="form-control" name="s_group">
-							<?php
-								$loopname = mysqli_query($con, "SELECT DISTINCT groupname FROM radgroupcheck");
-								while ($loop = mysqli_fetch_assoc($loopname)) { ?>
-									<option value="<?php echo $loop['groupname'] ?>"><?php echo $loop['groupname'] ?></option>
-							<?php } ?>
-						</select>
-							<hr>
-							<button class="btn btn-block btn-warning" type="submit" name="sign_up">Sign Up</button>
+
+						<div class="form-group">
+							<span class="text-secondary font-weight-bold">Username</span>
+							<input type="text" name="s_username" class="form-control rounded-0" placeholder="Username" required>
+						</div>
+
+						<div class="form-group">
+							<span class="text-secondary font-weight-bold">Password</span>
+							<input type="password" name="s_pass" class="form-control rounded-0" placeholder="Password" required>
+						</div>
+
+						<hr>
+						<button class="btn btn-block btn-warning font-weight-bold" type="submit" name="sign_up">Sign Up</button>
 					</form>
 					<?php
 						if (isset($_POST['sign_up'])) {
