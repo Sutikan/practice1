@@ -18,9 +18,9 @@
 
 	<div class="card border-0 w-25">
 		<div class="card-header bg-light">
-			<div class="nav nav-pills card-header-pills">
-				<a href="#login" class="nav-link active" data-toggle="pill">Log In</a>
-				<a href="#signup" class="nav-link" data-toggle="pill">Sign Up</a>
+			<div class="nav nav-tabs card-header-tabs">
+				<a href="#login" class="nav-link active" data-toggle="tab">Log In</a>
+				<a href="#signup" class="nav-link" data-toggle="tab">Sign Up</a>
 			</div>
 		</div>
 		<div class="card-body">
