@@ -99,6 +99,15 @@
 
 												<div class="alert alert-info font-weight-bold text-center">Generate user successful</div>
 
+												<form method="post">
+													<button class="btn btn-block btn-secondary font-weight-bold" type="submit" name="con_g">Confirm</button>
+												</form>
+												<?php
+													if (isset($_POST['con_g'])) {
+														echo "<script>window.location.href='admin_gen.php?id=$id'</script>";
+													}
+												?>
+
 											</div>
 										</div>
 									</div>
@@ -199,6 +208,14 @@
 													</tbody>
 												</table>
 												<div class="alert alert-info font-weight-bold text-center">Generate single user successful</div>
+												<form method="post">
+													<button class="btn btn-block btn-secondary font-weight-bold" type="submit" name="con_au">Confirm</button>
+												</form>
+												<?php
+													if (isset($_POST['con_au'])) {
+														echo "<script>window.location.href='admin_gen.php?id=$id'</script>";
+													}
+												?>
 											</div>
 										</div>
 									</div>

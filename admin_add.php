@@ -114,6 +114,14 @@
 													</tbody>
 												</table>
 												<div class="alert alert-info font-weight-bold text-center">Generate group successful</div>
+												<form method="post">
+													<button class="btn btn-block btn-secondary font-weight-bold" type="submit" name="con_ag">Confirm</button>
+												</form>
+												<?php
+													if (isset($_POST['con_ag'])) {
+														echo "<script>window.location.href='admin_gen.php?id=$id'</script>";
+													}
+												?>
 											</div>
 										</div>
 									</div>
