@@ -11,7 +11,7 @@
 		<div class="container-fluid">
 			<a href="" class="navbar-brand d-md-none">CTC <span class="text-warning font-weight-bold">NETWORK</span></a>
 
-			<button class="navbar-toggler d-block d-lg-none" type="button" data-toggle="collapse" data-target="#sideMenu"><span class="navbar-toggler-icon"></span></button>
+			<button class="navbar-toggler d-block d-md-none" type="button" data-toggle="collapse" data-target="#sideMenu"><span class="navbar-toggler-icon"></span></button>
 			<div class="collapse navbar-collapse" id="sideMenu">
 				<nav class="d-lg-none">
 					<div class="nav flex-column py-2" style="min-height: 100vh;">
@@ -29,7 +29,7 @@
 					</div> 
 				</nav>
 			</div>
-			<div class="ml-auto d-none d-lg-block">
+			<div class="ml-auto d-none d-md-block">
 				<button class="btn btn-sm btn-warning font-weight-bold" data-target="#logout" data-toggle="modal" >Log Out</button>
 			</div>
 		</div>

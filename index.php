@@ -16,7 +16,7 @@
 <body class="bg-dark d-flex justify-content-center align-items-center" style="min-height: 100vh;">
 
 
-	<div class="card border-0 w-25">
+	<div class="card border-0 w-25 ">
 		<div class="card-header bg-light">
 			<div class="nav nav-tabs card-header-tabs">
 				<a href="#login" class="nav-link active" data-toggle="tab">Log In</a>
